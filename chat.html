@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Chat</title>
+</head>
+
+<body>
+	
+	<center>
+		<div>
+			<div style="width: 50%; margin-bottom: 20px;" id="chat"></div><br/>
+			<form method="">
+				<input type="text" id="pesan" name="pesan" style="width: 50%;">
+				<button type="submit" onclick="return send()">Send</button>
+			</form>
+			<script type="text/javascript">
+				function send() {
+					let message = document.getElementById("pesan").value;
+					document.getElementById("chat").innerHTML += message + "<br/>";
+					document.getElementById("pesan").value = "";
+					return false
+				}
+			</script>
+		</div>
+	</center>
+
+</body>
+
+</html>

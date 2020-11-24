@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+</head>
+
+<body>
+
+    <center>
+        <table border="1px solid" style="width: 30%; margin-top: 40px; padding: 10px;box-shadow: 2px 2px 5px 5px cornflowerblue">
+            <tr>
+                <td>Masukan Nilai</td>
+                <td>Pilih Mata Uang</td>
+                <td>Nilai Rupiah</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" onkeyup="mataUang()" placeholder="Masukan Nilai" name="nilai" id="nilai"
+                        style="width: 90%;"></td>
+                <td>
+                    <select onchange="mataUang()" id="kurs" style="width: 90%;">
+                        <option value="0">Mata Uang</option>
+                        <option value="1">Dollar US</option>
+                        <option value="2">Dollar Singapore</option>
+                        <option value="3">Ringgit Malysia</option>
+                        <option value="4">Yen Jepang</option>
+                        <option value="5">Euro</option>
+                        <option value="6">Riyal Arab Saudi</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" disabled placeholder="Hasil Kurs" name="rupiah" id="rupiah" style="width: 90%;">
+                </td>
+            </tr>
+        </table>
+    </center>
+    <script type="text/javascript">
+        function mataUang() {
+            let i = document.getElementById("kurs").value;
+
+            if (i == 1) {
+                input = document.getElementById("nilai").value;
+                nilai = 9915;
+                hasil = nilai * input;
+                document.getElementById("rupiah").value = "Rp. " + hasil;
+            } else if (i == 2) {
+                input = document.getElementById("nilai").value;
+                nilai = 13472;
+                hasil = nilai * input
+                document.getElementById("rupiah").value = "Rp. " + hasil;
+            } else if (i == 3) {
+                input = document.getElementById("nilai").value;
+                nilai = 874;
+                hasil = nilai * input
+                document.getElementById("rupiah").value = "Rp. " + hasil
+            } else if (i == 4) {
+                input = document.getElementById("nilai").value;
+                nilai = 120;
+                hasil = nilai * input
+                document.getElementById("rupiah").value = "Rp. " + hasil;
+            } else if (i == 5) {
+                input = document.getElementById("nilai").value;
+                nilai = 15888;
+                hasil = nilai * input
+                document.getElementById("rupiah").value = "Rp. " + hasil;
+            } else if (i == 6) {
+                input = document.getElementById("nilai").value;
+                nilai = 3592;
+                hasil = nilai * input
+                document.getElementById("rupiah").value = "Rp. " + hasil;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
